@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entities xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="http://moqui.org/xsd/entity-definition-3.xsd">
+
+    <!-- Party Entity -->
+    <entity entity-name="Party" package="relationshipMgr" cache="true">
+        <field name="partyId" type="id" is-pk="true"/>
+        <field name="partyTypeEnumId" type="id"/>
+        <field name="description" type="text-medium"/>
+        <relationship type="one" title="PartyType" related="relationshipMgr.Enumeration">
+            <key-map field-name="partyTypeEnumId"/>
+        </relationship>
+        <relationship type="one-nofk" related="relationshipMgr.Organization" short-alias="organization"/>
+        <relationship type="one-nofk" related="relationshipMgr.Person" short-alias="person"/>
+        <relationship type="one-nofk" related="relationshipMgr.PartyRole" short-alias="roles"/>
+        <master>
+            <detail relationship="organization"/>
+            <detail relationship="person"/>
+            <detail relationship="roles"/>
+        </master>
+        <seed-data>
+            <relationshipMgr.EnumerationType enumTypeId="PartyType" description="Party Type"/>
+            <relationshipMgr.Enumeration enumId="PERSON" enumTypeId="PartyType" description="Person"/>
+            <relationshipMgr.Enumeration enumId="ORGANIZATION" enumTypeId="PartyType" description="Organization"/>
+        </seed-data>
+    </entity>
+
+    <!-- Person Entity -->
+    <entity entity-name="Person" package="relationshipMgr">
+        <field name="partyId" type="id" is-pk="true"/>
+        <field name="firstName" type="text-medium"/>
+        <field name="lastName" type="text-medium"/>
+        <relationship type="one" related="relationshipMgr.Party" short-alias="party">
+            <key-map field-name="partyId"/>
+        </relationship>
+    </entity>
+
+    <!-- Organization Entity -->
+    <entity entity-name="Organization" package="relationshipMgr">
+        <field name="partyId" type="id" is-pk="true"/>
+        <field name="organizationName" type="text-medium"/>
+        <relationship type="one" related="relationshipMgr.Party" short-alias="party">
+            <key-map field-name="partyId"/>
+        </relationship>
+    </entity>
+
+    <!-- PartyRole Entity -->
+    <entity entity-name="PartyRole" package="relationshipMgr">
+        <field name="partyId" type="id" is-pk="true"/>
+        <field name="roleTypeId" type="id" is-pk="true"/>
+        <relationship type="one" related="relationshipMgr.Party" short-alias="party">
+            <key-map field-name="partyId"/>
+        </relationship>
+        <relationship type="one" related="relationshipMgr.RoleType" short-alias="roleType">
+            <key-map field-name="roleTypeId"/>
+        </relationship>
+    </entity>
+
+    <!-- RoleType Entity -->
+    <entity entity-name="RoleType" package="relationshipMgr">
+        <field name="roleTypeId" type="id" is-pk="true"/>
+        <field name="description" type="text-medium"/>
+        <seed-data>
+            <relationshipMgr.RoleType roleTypeId="admin" description="Administrator"/>
+            <relationshipMgr.RoleType roleTypeId="customer" description= "placing customer"/>
+            <relationshipMgr.RoleType roleTypeId="employer" description="employer"/>
+        </seed-data>
+    </entity>
+
+    <!-- ContactMech Entity -->
+    <entity entity-name="ContactMech" package="relationshipMgr">
+        <field name="contactMechId" type="id" is-pk="true"/>
+        <field name="contactMechTypeId" type="id"/>
+        <field name="infoString" type="text-short">
+        <relationship type="one" related="relationshipMgr.ContactMechType" short-alias="type">
+            <key-map field-name="contactMechTypeId"/>
+        </relationship>
+    </entity>
+
+    <!-- ContactMechType Entity -->
+    <entity entity-name="ContactMechType" package="relationshipMgr">
+        <field name="contactMechTypeEnumId" type="id" is-pk="true"/>
+        <field name="description" type="text-medium"/>
+        <seed-data>
+            <relationshipMgr.ContactMechType contactMechTypeEnumId="EMAIL" description="Email Address"/>
+            <relationshipMgr.ContactMechType contactMechTypeEnumId="PHONE" description="Phone Number"/>
+            <relationshipMgr.ContactMechType contactMechTypeEnumId="Telecome" description="Postal Address"/>
+        </seed-data>
+    </entity>
+
+    <!-- PostalAddress Entity -->
+    <entity entity-name="PostalAddress" package="relationshipMgr">
+        <field name="contactMechId" type="id" is-pk="true"/>
+        <field name="address1" type="text-long"/>
+        <field name="city" type="text-medium"/>
+        <field name="postalCode" type="text-medium"/>
+        <relationship type="one" related="relationshipMgr.ContactMech" short-alias="contactMech">
+            <key-map field-name="contactMechId"/>
+        </relationship>
+    </entity>
+
+    <entity entity-name="Telecom" package="relationshipMgr">
+    <field name="contactMechId" type="id" is-pk="true"/>
+        <field name="contactNumber" type="id"/>
+        <relationship type="one" related="relationshipMgr.ContactMech" short-alias="contactMech">
+                <key-map field-name="contactMechId"/>
+        </relationship>
+
+    </entity>
+
+</entities>
+
+
+
+
+
+        <!--    <entity entity-name="Party" package="relationshipMgr">-->
+<!--        <field name="partyId" type="id" is-pk="true" />-->
+<!--        <field name="partyTypeEnumId" type="id"/>-->
+<!--        <relationship type="one-nofk" related="relationshipMgr.Organization" short-alias="organization"/>-->
+<!--        <relationship type="one-nofk" related="relationshipMgr.Person" short-alias="person"/>-->
+<!--        <relationship type="one" title="partyType" related="relationshipMgr.Enumeration" short-alias="type">-->
+<!--            <key-map field-name="partyTypeEnumId"/>-->
+<!--        </relationship>-->
+<!--        <master>-->
+<!--            <detail relationship="type"/>-->
+<!--            <detail relationship="organization"/>-->
+<!--            <detail relationship="person"/>-->
+<!--            <detail relationship="roles"/>-->
+<!--        </master>-->
+<!--    </entity>-->
+<!--    <entity entity-name="PartyType" package="relationshipMgr">-->
+<!--        <field name="partyTypeId" type="id" is-pk="true" />-->
+
+
+<!--        <field name="description" type="id"/>-->
+
+<!--    </entity>-->
+
+<!--    <entity entity-name="Person" package="relationshipMgr">-->
+<!--        <field name="partyId" type="id" is-pk="true"/>-->
+<!--        <field name="firstName" type="text-medium"/>-->
+<!--        <field name="lastname" type="text-medium"/>-->
+<!--        <field name="birthDate" type="date"/>-->
+<!--        <relationship type="one" related="Party" short-alias="person">-->
+<!--            <key-map field-name="partyId"/>-->
+<!--        </relationship>-->
+<!--    </entity>-->
+
+<!--    <entity entity-name="Organization" package="relationshipMgr">-->
+<!--        <field name="partyId" type="id" is-pk="true"/>-->
+<!--        <field name="organizationName" type="text-medium"/>-->
+<!--        <relationship type="one" related="Party" short-alias="organization">-->
+<!--            <key-map field-name="partyId"/>-->
+<!--        </relationship>-->
+<!--    </entity>-->
+
+<!--    <entity entity-name="PartyRole" package="relationshipMgr">-->
+<!--        <field name="partyId" type="id" is-pk="true"/>-->
+<!--        <field name="roleTypeId" type="id" is-pk="true"/>-->
+
+<!--        <relationship type="one" related="Party" short-alias="partyrole">-->
+<!--            <key-map field-name="partyId"/>-->
+<!--        </relationship>-->
+<!--        <relationship type="one" related="RoleType" short-alias="roletype">-->
+<!--            <key-map field-name="roleTypeId"/>-->
+<!--        </relationship>-->
+<!--    </entity>-->
+<!--    <entity entity-name="RoleType" package="relationshipMgr">-->
+<!--        <field name="roleTypeId" type="id" is-pk="true"/>-->
+<!--        <field name="description" type="text-medium"/>-->
+<!--    </entity>-->
+<!--    <entity entity-name="ContactMech" package="relationshipMgr">-->
+<!--        <field name="contactMechId" type="id" is-pk="true"/>-->
+<!--        <field name="contactMechTypeId" type="id"/>-->
+<!--        <relationship type="one" related="ContactMechType">-->
+<!--            <key-map field-name="contactMechTypeId"/>-->
+<!--        </relationship>-->
+<!--    </entity>-->
+
+<!--    <entity entity-name="ContactMechType" package="relationshipMgr">-->
+<!--        <field name="contactMechId" type="id" is-pk="true"/>-->
+<!--        <field name="contactMechTypeId" type="id"/>-->
+<!--        <relationship type="one" related="ContactMechType">-->
+<!--            <key-map field-name="contactMechTypeId"/>-->
+<!--        </relationship>-->
+<!--    </entity>-->
+
+<!--    <entity entity-name="PostalAddress" package="relationshipMgr">-->
+<!--        <field name="contactMechId" type="id" is-pk="true"/>-->
+<!--        <field name="contactMechTypeId" type="id"/>-->
+<!--        <relationship type="one" related="ContactMechType">-->
+<!--            <key-map field-name="contactMechTypeId"/>-->
+<!--        </relationship>-->
+<!--    </entity>-->
+
+
+</entities>

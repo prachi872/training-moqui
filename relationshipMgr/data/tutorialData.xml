@@ -1,0 +1,58 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<?xml version="1.0" encoding="UTF-8"?>-->
+<!--<entity-facade-xml type="seed">-->
+<!--    &lt;!&ndash; PartyType data &ndash;&gt;-->
+<!--    <relationshipMgr.PartyType partyTypeId="PERSON" description="Individual Person"/>-->
+<!--    <relationshipMgr.PartyType partyTypeId="ORGANIZATION" description="Organization"/>-->
+
+<!--    &lt;!&ndash; Party data &ndash;&gt;-->
+<!--    <relationshipMgr.Party partyId="P1001" partyTypeId="PERSON"/>-->
+<!--    <relationshipMgr.Party partyId="P1002" partyTypeId="ORGANIZATION"/>-->
+
+<!--    &lt;!&ndash; Person data &ndash;&gt;-->
+<!--    <relationshipMgr.Person partyId="P1001" firstName="John" lastname="Doe" birthDate="1985-07-16"/>-->
+
+<!--    &lt;!&ndash; Organization data &ndash;&gt;-->
+<!--    <relationshipMgr.Organization partyId="P1002" organizationName="Tech Solutions Inc."/>-->
+
+<!--    &lt;!&ndash; RoleType data &ndash;&gt;-->
+<!--    <relationshipMgr.RoleType roleTypeId="EMPLOYEE" description="Employee"/>-->
+<!--    <relationshipMgr.RoleType roleTypeId="MANAGER" description="Manager"/>-->
+
+<!--    &lt;!&ndash; PartyRole data &ndash;&gt;-->
+<!--    <relationshipMgr.PartyRole partyId="P1001" roleTypeId="EMPLOYEE"/>-->
+<!--    <relationshipMgr.PartyRole partyId="P1002" roleTypeId="MANAGER"/>-->
+
+<!--    &lt;!&ndash; ContactMechType data &ndash;&gt;-->
+<!--    <relationshipMgr.ContactMechType contactMechTypeId="EMAIL" contactMechId="C1001"/>-->
+<!--    <relationshipMgr.ContactMechType contactMechTypeId="PHONE" contactMechId="C1002"/>-->
+
+<!--    &lt;!&ndash; ContactMech data &ndash;&gt;-->
+<!--    <relationshipMgr.ContactMech contactMechId="C1001" contactMechTypeId="EMAIL"/>-->
+<!--    <relationshipMgr.ContactMech contactMechId="C1002" contactMechTypeId="PHONE"/>-->
+
+<!--    &lt;!&ndash; PostalAddress data &ndash;&gt;-->
+<!--    <relationshipMgr.PostalAddress contactMechId="C1003" contactMechTypeId="ADDRESS"/>-->
+<!--</entity-facade-xml>-->
