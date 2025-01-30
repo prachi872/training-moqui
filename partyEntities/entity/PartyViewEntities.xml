@@ -1,0 +1,32 @@
+<entities xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="http://moqui.org/xsd/entity-definition-3.xsd">
+<view-entity entity-name="PartyContactInfo" package="partyEntities">
+    <member-entity entity-alias="party" entity-name="Party"/>
+    <member-entity entity-alias="person" entity-name="Person">
+        <key-map field-name="partyId" related="partyId"/>
+    </member-entity>
+    <member-entity entity-alias="partyRole" entity-name="PartyRole">
+        <key-map field-name="partyId" related="partyId"/>
+    </member-entity>
+    <member-entity entity-alias="partyContactMech" entity-name="PartyContactMech">
+        <key-map field-name="partyId" related="partyId"/>
+        <key-map field-name="contactMechId" related="contactMechId"/>
+    </member-entity>
+    <member-entity entity-alias="contactMech" entity-name="ContactMech">
+        <key-map field-name="contactMechId" related="contactMechId"/>
+    </member-entity>
+    <member-entity entity-alias="contactMechType" entity-name="ContactMechType">
+        <key-map field-name="contactMechTypeId" related="contactMechTypeId"/>
+    </member-entity>
+    <member-entity entity-alias="telecomNumber" entity-name="TelecomNumber">
+        <key-map field-name="contactMechId" related="contactMechId"/>
+    </member-entity>
+    <member-entity entity-alias="postalAddress" entity-name="PostalAddress">
+        <key-map field-name="contactMechId" related="contactMechId"/>
+    </member-entity>
+    <entity-condition>
+        <econdition field-name="roleTypeId" value="CUSTOMER"/>
+        <econdition field-name="contactMechPurposeTypeId" value="PRIMARY_EMAIL"/>
+    </entity-condition>
+</view-entity>
+</entities>
