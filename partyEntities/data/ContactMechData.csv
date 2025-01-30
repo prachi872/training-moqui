@@ -1,0 +1,17 @@
+partyEntities.contact.ContactMech, demo
+contactMechId,contactMechTypeEnumId,infoString
+"CM3001","EmailAddress","arjun.verma@example.com"
+"CM3002","TelecomNumber",
+"CM3003","PostalAddress",
+"CM3004","EmailAddress","mihir.tandon@example.com"
+"CM3005","TelecomNumber",
+"CM3006","PostalAddress",
+"CM3007","EmailAddress","ishaan.malhotra@example.com"
+"CM3008","TelecomNumber",
+"CM3009","PostalAddress",
+"CM3010","EmailAddress","kunal.thakur@example.com"
+"CM3011","EmailAddress","lakshay.patel@example.com"
+"CM3012","EmailAddress","nikhil.saxena@example.com"
+"CM3013","EmailAddress","omkar.jain@example.com"
+"CM3014","EmailAddress","gaurav.bansal@example.com"
+

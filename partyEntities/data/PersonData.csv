@@ -1,0 +1,17 @@
+partyEntities.Person, demo
+partyId, firstName, lastName, birthDate
+"PER1001","Arjun","Verma","1991-03-10"
+"PER1002","Bharat","Singh","2003-04-22"
+"PER1003","Chirag","Mehta","1992-11-25"
+"PER1004","Dev","Sharma","1998-06-12"
+"PER1005","Eshan","Khatri","1979-09-05"
+"PER1006","Farhan","Ansari","2005-07-21"
+"PER1007","Ishaan","Malhotra","2001-12-30"
+"PER1008","Gaurav","Bansal","2006-03-15"
+"PER1009","Harsh","Kapoor","2007-09-10"
+"PER1010","Jatin","Yadav","2013-11-05"
+"PER1011","Kunal","Thakur","2005-06-17"
+"PER1012","Lakshay","Patel","2003-05-29"
+"PER1013","Mihir","Tandon","2003-12-14"
+"PER1014","Nikhil","Saxena","2011-02-28"
+"PER1015","Omkar","Jain","2003-08-07"

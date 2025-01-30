@@ -1,0 +1,16 @@
+partyEntites.contact.PartyContactMech, demo
+partyId,contactMechId,contactMechPurposeId,fromDate,thruDate
+"PER1001","CM2001","PrimaryEmail","2000-01-01","2000-05-01"
+"ORG1001","CM2002","TelecomNumber","2000-01-01",
+"PER1002","CM2004","PrimaryEmail","2000-01-01",
+"PER1003","CM2003","PostalAddress","2000-01-01","2025-05-01"
+"ORG1002","CM2006","PostalAddress","2000-01-01",
+"PER1004","CM2005","TelecomNumber","2000-01-01",
+"PER1005","CM2007","BillingEmail","2000-01-01",
+"PER1006","CM2010","PrimaryEmail","2000-01-01","2025-05-01"
+"PER1007","CM2009","PostalAddress","2000-01-01",
+"PER1011","CM2011","PrimaryEmail","2000-01-01",
+"PER1012","CM2012","ShippingEmail","2000-01-01","2025-01-29"
+"PER1013","CM2004","BillingEmail","2000-01-01",
+"PER1014","CM2013","PrimaryEmail","2000-01-01",
+"PER1015","CM2008","TelecomNumber","2000-01-01",

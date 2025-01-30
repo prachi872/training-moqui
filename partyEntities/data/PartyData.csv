@@ -1,0 +1,30 @@
+partyEntities.Party, demo
+partyId, partyTypeEnumId
+"PER1001","PERSON"
+"ORG1001","Organization"
+"PER1002","PERSON"
+"PER1003","PERSON"
+"ORG1002","Organization"
+"PER1004","PERSON"
+"ORG1003","Organization"
+"PER1005","PERSON"
+"ORG1004","Organization"
+"PER1006","PERSON"
+"PER1007","PERSON"
+"PER1008","PERSON"
+"PER1009","PERSON"
+"PER1010","PERSON"
+"PER1011","PERSON"
+"PER1012","PERSON"
+"PER1015","PERSON"
+"PER1013","PERSON"
+"PER1014","PERSON"
+"ORG1005","Organization"
+
+
+
+
+
+
+
+
