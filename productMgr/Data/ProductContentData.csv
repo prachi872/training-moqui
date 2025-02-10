@@ -1,0 +1,9 @@
+custom.udm.ProductContent,demo
+productContentId,productId,productContentTypeEnumId,contentLocation
+CON101,PROD101,PcntProductName,/descriptions/Motorola50_Edge.txt
+CON102,PROD102,PcntDescription,/descriptions/smartphone_128.txt
+CON103,PROD103,PcntDeliveryInfo,/delivery/smartphone_256.txt
+CON104,PROD104,PcntDescription,/descriptions/smartphone.txt
+CON105,PROD105,PcntPriceDetail,/details/laptop.txt
+CON106,PROD106,PcntProductName,TUF-Gaming
+CON107,PROD107,PcntDescription,/descriptions/laptop_phone.txt

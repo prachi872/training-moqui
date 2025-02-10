@@ -1,0 +1,10 @@
+custom.udm.ProductFeature, demo
+productfeatureId, productfeatureTypeEnumId, description
+PRFT101,PftColor,BLUE
+PRFT103,PftBrand,APPLE
+PRFT106,PftColor,BLACK
+PRFT109,PftColor,WHITE
+
+
+
+

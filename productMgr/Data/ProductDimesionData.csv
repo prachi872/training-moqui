@@ -1,0 +1,17 @@
+custom.udm.ProductDimension,demo
+productId,dimensionTypeEnumId,dimensionValue,valueUomId
+PROD101,PdtWidth,4.5,inch
+PROD102,PdtWidth,4.5,inch
+PROD103,PdtWidth,3,inch
+PROD104,PdtWidth,3.5,inch
+PROD101,PdtLength,6,inch
+PROD102,PdtLength,6,inch
+PROD103,PdtLength,6,inch
+PROD104,PdtLength,6.5,inch
+PROD105,PdtWeight,1.5,kg
+PROD106,PdtWeight,2,kg
+PROD107,PdtWeight,1,kg
+
+
+
+

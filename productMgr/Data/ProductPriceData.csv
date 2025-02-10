@@ -1,0 +1,14 @@
+custom.udm.ProductPrice,demo
+productPriceId,productId,priceTypeEnumId,price,fromDate,thruDate
+PRC_101, PROD101,PptWholesale,16000,2000-01-01,2020-01-01
+PRC_102, PROD102,PptList,16000,2000-01-01,
+PRC_103, PROD103,PptMinimum,15000,2000-01-01,
+PRC_104, PROD104,PptList,35000,2000-01-01,2020-01-01
+PRC_105, PROD105,PptMinimum,55000,2000-01-01,
+PRC_106, PROD106,PptList,60000,2000-01-01,
+PRC_107, PROD107,PptWholesale,75000,2000-01-01,2020-01-01
+
+
+
+
+

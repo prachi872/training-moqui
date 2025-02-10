@@ -1,0 +1,9 @@
+custom.udm.Product,demo
+productId,productName,productTypeEnumId,isVirtual,isVariant
+PROD101,Smartphone,PtFinishedGood,Y,N
+PROD102,Smartphone-128GB,PtFinishedGood,N,Y
+PROD103,Smartphone-256GB,PtFinishedGood,N,Y
+PROD104,Smartphone,PtFinishedGood,Y,N
+PROD105,Laptop,PtFinishedGood,N,Y
+PROD106,Laptop-BLACK,PtFinishedGood,N,Y
+PROD107,Laptop-Phone-Promotional-Package,PtFinishedGood,N,Y

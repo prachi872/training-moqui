@@ -1,0 +1,5 @@
+custom.udm.ProductFeatureAppl, demo
+productId, productFeatureId, applTypeEnumId, fromDate, thruDate
+PROD102,PRFT101,PfatSelectable
+PROD104,PRFT102,PfatStandard,25-09-24,02-02-25
+PROD105,PRFT103,PfatStandard

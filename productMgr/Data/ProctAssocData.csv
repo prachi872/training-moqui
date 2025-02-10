@@ -1,0 +1,9 @@
+custom.udm.ProductAssoc,csv
+productId,toProductId,productAssocTypeEnumId,quantity,fromDate,thruDate
+PROD101,PROD103,PatAlsoBought,2,2005-01-01,2025-12-31
+PROD102,PROD103,PatReplacement,1,2005-01-01,2025-12-31
+PROD103,PROD107,PatAlsoBought,2,2005-01-01,2025-12-31
+PROD104,PROD106,PatAlsoBought,2,2005-01-01,2025-12-31
+PROD105,PROD101,PatComponent,2,2005-01-01,2025-12-31
+PROD106,PROD102,PatComponent,2,2005-01-01,2025-12-31
+PROD107,PROD101,PatAlsoBought,2,2005-01-01,2025-12-31
